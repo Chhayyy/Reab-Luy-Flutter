@@ -17,6 +17,7 @@ class _HomeState extends State<Home> {
         isIcon: true,
         width: 50,
         text: 'Continue with Google',
+        onPressed: () => print('Hello buttton'),
       )),
     );
   }
