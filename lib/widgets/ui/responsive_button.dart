@@ -20,14 +20,14 @@ class ResponsiveButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Flexible(
         child: Container(
-      height: 60,
+      height: 52,
       width: isIcon == true ? double.maxFinite : width,
       padding: const EdgeInsets.only(left: 20, right: 20),
       decoration: BoxDecoration(
           border: isPrimary == true
               ? null
               : Border.all(width: 2, color: CupertinoColors.systemGrey2),
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(10),
           color: isPrimary == true ? Colors.blue : Colors.white),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -36,10 +36,10 @@ class ResponsiveButton extends StatelessWidget {
           const SizedBox(width: 20),
           Text(
             text,
-            style: const TextStyle(
-                color: CupertinoColors.black,
+            style: TextStyle(
+                color: isPrimary == true ? Colors.white : Colors.black,
                 fontSize: 18,
-                fontWeight: FontWeight.w500),
+                fontWeight: FontWeight.w400),
           )
         ],
       ),
