@@ -30,10 +30,11 @@ class ResponsiveButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           color: isPrimary == true ? Colors.blue : Colors.white),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           isIcon == true ? SvgPicture.asset('assets/google.svg') : Container(),
-          const SizedBox(width: 20),
+          SizedBox(width: isIcon == true ? 20 : 0),
           Text(
             text,
             style: TextStyle(

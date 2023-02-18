@@ -2,14 +2,9 @@ import 'package:flutter/material.dart';
 import '../ui/circle_image.dart';
 import '../ui/responsive_button.dart';
 
-class BoxModal extends StatefulWidget {
+class BoxModal extends StatelessWidget {
   const BoxModal({super.key});
 
-  @override
-  State<BoxModal> createState() => _CardState();
-}
-
-class _CardState extends State<BoxModal> {
   @override
   Widget build(BuildContext context) {
     return Center(
