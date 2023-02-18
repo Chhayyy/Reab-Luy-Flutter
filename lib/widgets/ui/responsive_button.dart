@@ -20,26 +20,27 @@ class ResponsiveButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Flexible(
         child: Container(
-      height: 60,
+      height: 52,
       width: isIcon == true ? double.maxFinite : width,
       padding: const EdgeInsets.only(left: 20, right: 20),
       decoration: BoxDecoration(
           border: isPrimary == true
               ? null
               : Border.all(width: 2, color: CupertinoColors.systemGrey2),
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(10),
           color: isPrimary == true ? Colors.blue : Colors.white),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           isIcon == true ? SvgPicture.asset('assets/google.svg') : Container(),
-          const SizedBox(width: 20),
+          SizedBox(width: isIcon == true ? 20 : 0),
           Text(
             text,
-            style: const TextStyle(
-                color: CupertinoColors.black,
+            style: TextStyle(
+                color: isPrimary == true ? Colors.white : Colors.black,
                 fontSize: 18,
-                fontWeight: FontWeight.w500),
+                fontWeight: FontWeight.w400),
           )
         ],
       ),
